@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "Checkout System API",
+    "_postman_id": "b4a1c0de-1234-5678-90ab-checkout",
+    "description": "Postman collection for Checkout System Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:3000/products", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["products"] }
+      }
+    },
+    {
+      "name": "Add Item to Cart",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"productId\": 1,\n  \"quantity\": 2\n}" },
+        "url": { "raw": "http://localhost:3000/cart/add/:userId", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","add"] }
+      }
+    },
+    {
+      "name": "View Cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:3000/cart/view/:userId", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","view"] }
+      }
+    },
+    {
+      "name": "Clear Cart",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/cart/clear?userId=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["cart", "clear"],
+          "query": [
+            { "key": "userId", "value": "1" }
+          ]
+        },
+        "description": "Clears the cart for the specified user. Pass userId as a query parameter (recommended) or in the request body as JSON. Example body: {\n  \"userId\": 1\n}"
+      }
+    }
+  ]
+}
