@@ -4,14 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "dev": "ts-node-dev src/app.ts"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> 6f32b0928e9a620c9f0c0f12d7030a813e47cd1f
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^2.2.0",
+<<<<<<< HEAD
     "cors": "^2.8.5",
+=======
+>>>>>>> 6f32b0928e9a620c9f0c0f12d7030a813e47cd1f
     "express": "^5.1.0",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
@@ -23,7 +30,10 @@
     "@types/sequelize": "^4.28.20",
     "sequelize-cli": "^6.6.3",
     "ts-node": "^10.9.2",
+<<<<<<< HEAD
     "ts-node-dev": "^2.0.0",
+=======
+>>>>>>> 6f32b0928e9a620c9f0c0f12d7030a813e47cd1f
     "typescript": "^5.9.2"
   }
 }

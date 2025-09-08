@@ -20,7 +20,11 @@
         "method": "POST",
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": { "mode": "raw", "raw": "{\n  \"productId\": 1,\n  \"quantity\": 2\n}" },
+<<<<<<< HEAD
         "url": { "raw": "http://localhost:3000/cart/add/:userId", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","add"] }
+=======
+        "url": { "raw": "http://localhost:3000/cart/add", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","add"] }
+>>>>>>> 6f32b0928e9a620c9f0c0f12d7030a813e47cd1f
       }
     },
     {
@@ -28,13 +32,26 @@
       "request": {
         "method": "GET",
         "header": [],
+<<<<<<< HEAD
         "url": { "raw": "http://localhost:3000/cart/view/:userId", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","view"] }
+=======
+        "url": { "raw": "http://localhost:3000/cart/view", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","view"] }
+      }
+    },
+    {
+      "name": "Remove Item from Cart",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": { "raw": "http://localhost:3000/cart/delete/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","delete","1"] }
+>>>>>>> 6f32b0928e9a620c9f0c0f12d7030a813e47cd1f
       }
     },
     {
       "name": "Clear Cart",
       "request": {
         "method": "DELETE",
+<<<<<<< HEAD
         "header": [
           { "key": "Content-Type", "value": "application/json" }
         ],
@@ -49,6 +66,10 @@
           ]
         },
         "description": "Clears the cart for the specified user. Pass userId as a query parameter (recommended) or in the request body as JSON. Example body: {\n  \"userId\": 1\n}"
+=======
+        "header": [],
+        "url": { "raw": "http://localhost:3000/cart/clear", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["cart","clear"] }
+>>>>>>> 6f32b0928e9a620c9f0c0f12d7030a813e47cd1f
       }
     }
   ]
